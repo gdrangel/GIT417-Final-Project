@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GIT417 Final Project</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="javascript.js" defer></script>
+    </head>
+    <body>
+        <header class="lmodebg">
+            <nav>
+                <ul>
+                    <li> 
+                        <img src="images/translogo.png" alt=""><p>uh</p> <!-- Image sourced from: https://www.mcdonalds.com/us/en-us.html -->
+                    </li>
+                    <li class="hover">
+                        <a class="nav lmodetxt" href="#items">Items</a>
+                    </li>
+                    <li class="hover">
+                        <a class="nav lmodetxt" href="#form">Form</a>
+                    </li>
+                    <li class="hover">
+                        <a class="nav lmodetxt" href="#game">Game</a>
+                    </li>
+                    <li id="pagetop" class="lmodebg">
+                        <a href="#" class="lmodetxt">Page Top</a>
+                    </li>
+                    <li id="darkmode" class="lmodebg">
+                        <a class="lmodetxt" onclick="switchMode()">Toggle Mode</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="lmodetxt">Welcome to McDonald's!</h1>
+        <img src="images/biglogo.jpg" alt="" class="big"> <!-- Image sourced from: https://www.mcdonalds.com/us/en-us/about-our-food.html -->
+        <section id="items" class="lmodebg">
+            <h2 class="lmodetxt">Take a look into some of our world-famous menu items!</h2>
+            <div class="pannels lmodebg">
+                <div class="pannel visible" id="div1">
+                    <img src="images/BigMac.png" alt=""> <!-- Image sourced from: https://www.mcdonalds.com/us/en-us/product/big-mac.html -->
+                    <div>
+                        <h3 class="lmodetxt">Big Mac®</h3>
+                        <p class="lmodetxt">When a craving hits for those two all-beef patties it’s time to stop thinking about what’s on a Big Mac® and take a bite. The McDonald's Big Mac is a 100% beef burger with a taste like no other. The mouthwatering perfection starts with two 100% pure all beef patties and Big Mac Sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and a slice of American cheese. It contains no artificial flavors, preservatives, or added colors from artificial sources. Our pickle contains an artificial preservative, so skip it if you like.</p>
+                        <!-- Official description sourced from: https://www.mcdonalds.com/us/en-us/product/big-mac.html -->
+                    </div>
+                </div>
+                <div class="pannel hidden" id="div2">
+                    <img src="images/QuarterPounderwithCheese.png" alt=""> <!-- Image sourced from: https://www.mcdonalds.com/us/en-us/product/quarter-pounder-with-cheese.html -->
+                    <div>
+                        <h3 class="lmodetxt">Quarter Pounder® with Cheese</h3>
+                        <p class="lmodetxt">Each Quarter Pounder with Cheese burger features a ¼ lb. of 100% fresh beef that’s hot, deliciously juicy and cooked when you order. What comes on a Quarter Pounder? Each fresh beef burger is seasoned with just a pinch of salt and pepper, sizzled on a flat iron grill, then topped with slivered onions, tangy pickles and two slices of melty American cheese on a sesame seed bun. Our QPC® contains no artificial flavors, preservatives or added colors from artificial sources. Our pickle contains an artificial preservative, so skip it if you like.</p>
+                        <!-- Official description sourced from: https://www.mcdonalds.com/us/en-us/product/quarter-pounder-with-cheese.html -->
+                    </div>
+                </div>
+                <div class="pannel hidden" id="div3">
+                    <img src="images/Filet-O-Fish.png" alt=""> <!-- Image sourced from: https://www.mcdonalds.com/us/en-us/product/filet-o-fish.html -->
+                    <div>
+                        <h3 class="lmodetxt">Filet-O-Fish®</h3>
+                        <p class="lmodetxt">Dive into our wild-caught Filet-O-Fish, a classic McDonald's fish sandwich! Our fish sandwich recipe features a crispy fish filet patty made with wild-caught Alaskan Pollock on melty American cheese and is topped with creamy McDonald’s tartar sauce, all served on a soft, steamed bun.</p>
+                        <!-- Official description sourced from: https://www.mcdonalds.com/us/en-us/product/filet-o-fish.html -->
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="lmodebg lmodetxt lmodebdr" onclick="switchDiv('div1')">Big Mac®</button>
+                <button class="lmodebg lmodetxt lmodebdr" onclick="switchDiv('div2')">Quarter Pounder® with Cheese</button>
+                <button class="lmodebg lmodetxt lmodebdr" onclick="switchDiv('div3')">Filet-O-Fish®</button>
+            </div>
+        </section>
+        <section id="form" class="lmodebg">
+            <h2 class="lmodetxt">Want to contact us? Enter your information here!</h2>
+            <form id="reset">
+                <label for="name" class="lmodetxt">Full Name<span class="required">*</span></label>
+                <span class="errorname"></span>
+                <input type="text" id="name" name="name" autocomplete="given-name">
+                <fieldset>
+                    <legend class="lmodetxt">Preferred method of contact<span class="required">*</span></legend>
+                    <input type="radio" id="phone" name="contact" value="Phone" autocomplete="tel" onclick="req()" checked>
+                    <label for="phone" class="lmodetxt">Phone</label><br>
+                    <input type="radio" id="email" name="contact" value="Email" autocomplete="email" onclick="req()" >
+                    <label for="email" class="lmodetxt">Email</label><br>
+                </fieldset>
+                <label for="phoneNum" class="lmodetxt">Phone Number<span id="phoner" class="required">*</span></label>
+                <span class="errorphone"></span>
+                <input type="text" id="phoneNum" name="phoneNum">
+                <label for="emailAdd" class="lmodetxt">Email Address<span id="emailr" class="required"></span></label>
+                <span class="erroremail"></span>
+                <input type="text" id="emailAdd" name="emailAdd">
+                <label for="comments" class="lmodetxt">Comments<span class="required">*</span></label>
+                <span class="errorcomments"></span>
+                <textarea name="comments" id="comments"></textarea>
+                <span id="result" class="lmodetxt"></span>
+                <input type="submit" id="submit" class="lmodebg lmodetxt lmodebdr">
+            </form>
+        </section>
+        <section id="game" class="lmodebg">
+            <h2 class="lmodetxt">Want to win a coupon for one free large fountain drink?</h2>
+            <h3 class="lmodetxt">Play the guessing game by entering a number from 1 to 10. If you guess the correct number, you win!</h3>
+            <span id="playeroutput" class="lmodetxt"></span>
+            <span id="randomoutput" class="lmodetxt"></span>
+            <p id="gameresult" class="lmodetxt"></p>
+            <span id="gameerror" class="lmodetxt"></span>
+            <input type="number" id="number" min="1" max="10">
+            <button class="lmodebg lmodetxt lmodebdr" id="gamebutton" onclick="game()">Guess!</button>
+        </section>
+    </body>
+    <footer>
+        <p class="lmodetxt">This website is in no way affiliated with McDonald's Corporation or the McDonald's brand. This project is purely for personal use.</p>
+        <p class="lmodetxt">All images and product descriptions were sourced from <a href="https://www.mcdonalds.com/us/en-us.html">www.mcdonalds.com</a>.</p>
+    </footer>
+</html>

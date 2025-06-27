@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.lmodebg {
+    background-color: white;
+}
+
+.dmodebg {
+    background-color: black;
+}
+
+.bg {
+    background-color: #DEDEDE;
+}
+
+.dbg {
+    background-color: #484848;
+}
+
+.lmodetxt {
+    color: black;
+}
+
+.dmodetxt {
+    color: white;
+}
+
+.lmodebdr {
+    border-color: black;
+}
+
+.dmodebdr {
+    border-color: white;
+}
+
+nav {
+    height: 108px;
+}
+
+.nav {
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    box-shadow: 0px 1px 5px;
+    height: 108px;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+ul li p {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.hover {
+    display: flex;
+    align-items: center;
+    height: 108px;
+}
+
+.hover:hover, button:hover, #submit:hover, #pagetop:hover, #darkmode:hover {
+    background-color: red;
+}
+
+.hover, button, #submit, #pagetop, #darkmode {
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    height: 108px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 0px 100px;
+}
+
+#pagetop, #darkmode {
+    font-size: 1rem;
+    font-weight: bold;
+    position: fixed;
+    padding: 20px;
+    bottom: 20px;
+    margin: 0;
+    box-shadow: 0px 1px 5px;
+    border-radius: 20px;
+    z-index: 5;
+}
+
+#pagetop { 
+    right: 20px;
+}
+
+#darkmode {
+    left: 20px;
+}
+
+.big {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    padding-bottom: 70px;
+}
+
+#items {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    border: 5px solid red;
+}
+
+#items h2 {
+    padding-bottom: 50px;
+    border-bottom: 5px solid red;
+}
+
+.pannels {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 5px solid red;
+}
+
+.pannel {
+    display: flex;
+    flex-direction: row;
+}
+
+.pannel div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pannel div h3 {
+    font-size: 3rem;
+}
+
+.pannel div p {
+    text-align: center;
+}
+
+.pannel div h3, .pannel div p {
+    padding: 50px;
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+}
+
+.visible {
+    visibility: visible;
+    position: static;
+    opacity: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 30px;
+}
+
+#submit {
+    display: block;
+    margin: 0 auto;
+}
+
+button, #submit {
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#form {
+    padding-top: 50px;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    border: 5px solid red;
+}
+
+form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 450px;
+}
+
+label, span, legend, input, textarea {
+    font-size: 1.5em;
+}
+
+input, fieldset, textarea {
+    margin-bottom: 20px;
+}
+
+.required, .errorname, .errorphone, .erroremail, .errorcomments, #gameerror {
+    color: red;
+}
+
+#result {
+    padding: 30px 0px;
+    text-align: center;
+}
+
+#game {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-top: 60px;
+    border: 5px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game input, #game button {
+    width: 200px;
+}
+
+#game span, #game p, #game input {
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
